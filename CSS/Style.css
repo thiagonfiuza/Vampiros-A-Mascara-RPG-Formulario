@@ -1,0 +1,201 @@
+@import url(./Fonts.css); /*Importar fontes*/
+
+/*Ajustes de plano de fundo*/
+body
+{
+    background-image: url(../Assets/Background.PNG);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+}
+
+/*Titulo Vampiros*/
+.Titulo
+{
+    font-family: 'Percolator-expert';
+    font-size: 60px;
+    text-align: center;
+    text-shadow: 2.5px 2.5px 5px DarkRed;
+}
+
+/*Subtitulo A Mascara - Ficha de personagem*/
+.Subtitulo
+{
+    font-family: 'Percolator-expert';
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 2.5px 2.5px 5px darkred;
+}
+
+/*Setor de Cadastro*/
+
+.Grupo
+{
+    border: 0;
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+
+    font-family: 'Percolator-expert';
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 2.5px 2.5px 5px darkred;
+}
+
+
+
+.Campo input[type="text"], .Campo select
+{
+    padding: 0.2em;
+    border: 1px solid darkred;
+    box-shadow: 2px 2px 5px darkred;
+    display: block;
+    text-align: center;
+    border-radius: 10px;
+    width: 300px;
+    height: 30px;
+}
+
+.Campo select
+{
+    width: 300px;
+    height: 40px;
+}
+
+.opcoes-Brujah
+{
+    
+}
+
+
+.Pontos-de-sangue input[type="checkbox"], .Força-de-vontade input[type="checkbox"], .Humanidade input[type="checkbox"]
+{
+    border: 1px solid darkred;
+    box-shadow: 2px 2px 5px darkred;
+    border-radius: 10px;
+    width: 25px;
+    height: 25px;
+}
+
+/* Atributos */
+.Setor .Subtitulo
+{
+    height: 0;
+}
+
+.Classificação
+{
+    display: flex;
+    justify-content: space-around;    
+}
+
+.grupo-atributos, .Habilidades, .Vantagens
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+.Fisicos, .Sociais, .Mentais, .Talentos, .Pericias, .Conhecimentos, .Antecedentes, .Disciplinas, .Virtudes
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 280px;
+}
+
+.Final-Ficha
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+.Humanidade, .Força-de-vontade, .Pontos-de-sangue
+{
+    font-size: 30px;
+    font-family: 'Percolator-expert';
+    text-align: center;
+    text-shadow: 2.5px 2.5px 5px DarkRed;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+.Humanidade input, .Força-de-vontade input
+{
+    width: 25px;
+    height: 25px;
+}
+
+.Pontos-de-sangue input
+{
+    width: 25px;
+    height: 25px;
+}
+
+.EXP
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Percolator-expert';
+    text-shadow: 2.5px 2.5px 5px DarkRed;
+}
+
+.Campo-EXP input[type="text"]
+{
+    padding: 0.2em;
+    border: 1px solid darkred;
+    box-shadow: 2px 2px 5px darkred;
+    display: block;
+    text-align: center;
+    border-radius: 10px;
+    width: 250px;
+    height: 50px;
+}
+
+.grupo-atributos input[type="checkbox"], .Habilidades input[type="checkbox"], .Vantagens input[type="checkbox"]
+{
+    padding: 0.2em;
+    border: 1px solid darkred;
+    box-shadow: 2px 2px 5px darkred;
+    border-radius: 20px;
+    width: 18px;
+    height: 18px;
+}
+
+.Virtudes
+{
+    width: auto;
+}
+
+hr
+{
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 50%;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(139, 0, 0, 0.75), rgba(255, 255, 255, 0));        
+}
+
+.Antecedentes input[type="text"], .Disciplinas input[type="text"]
+{
+    padding: 0.2em;
+    border: 1px solid darkred;
+    box-shadow: 2px 2px 5px darkred;
+    display: block;
+    text-align: center;
+    border-radius: 10px;
+    width: 130px;
+    height: 20px;
+}

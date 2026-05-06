@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Vampiros: A Mascara</title>
+    <link rel="stylesheet" href="./CSS/Style.css">
+    <link rel="stylesheet" href="./CSS/Fonts.css">
+
+</head>
+
+<body>
+
+
+
+    <header>
+        <h1 class="Titulo">Vampiros</h1>
+        <h2 class="Subtitulo">A Mascara</h2>
+        <h3 class="Subtitulo">Ficha de personagem</h3>
+    </header>
+    <hr>
+
+    <main>
+        <form>
+            <div class="Area-Cadastro">
+                <fieldset class="Grupo">
+                    <div class="Campo">
+                        <label for="Nome"><strong>Nome:</strong></label>
+                        <input type="text" , name="Nome" id="Nome" required>
+                    </div>
+                    <div class="Campo">
+                        <label for="Personagem"><strong>Personagem:</strong></label>
+                        <input type="text" , name="Personagem" id="Personagem" required>
+                    </div>
+                    <div class="Campo">
+                        <label for="Cronicas"><strong>Cronicas:</strong></label>
+                        <input type="text" , name="Cronicas" id="Cronicas">
+                    </div>
+                    <div class="Campo">
+                        <label for="Natureza"><strong>Natureza:</strong></label>
+                        <input type="text" , name="Natureza" id="Natureza" required>
+                    </div>
+                    <div class="Campo">
+                        <label for="Comportamento"><strong>Comportamento:</strong></label>
+                        <input type="text" , name="Comportamento" id="Comportamento" required>
+                    </div>
+                    <div class="Campo">
+                        <label for="clan" name="clan"><strong>clan</strong></label>
+                        <select type="text" id="clan" onchange="changeDisciplines()">
+                            <option class="opcoes-Selecione" disabled value="" selected>Selecione</option>
+                            <option class="opcoes-Brujah" value="Brujah">Brujah</option>
+                            <option class="opcoes-Gangrel" value="Gangrel">Gangrel</option>
+                            <option class="opcoes-Malkaviano" value="Malkaviano">Malkaviano</option>
+                            <option class="opcoes-Nosferatu" value="Nosferatu">Nosferatu</option>
+                            <option class="opcoes-Toreador" value="Toreador">Toreador</option>
+                            <option class="opcoes-Tremere" value="Tremere">Tremere</option>
+                            <option class="opcoes-Ventrue" value="Ventrue">Ventrue</option>
+                        </select>
+                    </div>
+                    <div class="Campo">
+                        <label for="Geração"><strong>Geração:</strong></label>
+                        <input type="text" , name="Geração" id="Geração">
+                    </div>
+                    <div class="Campo">
+                        <label for="Refugio"><strong>Refugio:</strong></label>
+                        <input type="text" , name="Refugio" id="Refugio">
+                    </div>
+                    <div class="Campo">
+                        <label for="Conceito"><strong>Conceito:</strong></label>
+                        <input type="text" , name="Conceito" id="Conceito">
+                    </div>
+                </fieldset>
+            </div>
+            <hr>
+            <div class="Setor">
+                <h2 class="Subtitulo" id="titulo-Atributos">Atributos</h2>
+                <div class="Classificação">
+                </div>
+                <Div class="grupo-atributos">
+                    <div>
+                        <h3 class="Subtitulo" data-max="7" id="titulo-Fisicos">Físicos ( 07 )</h3>
+                        <div class="Fisicos">
+                            <label class="Força"><strong>Força</strong></label>
+                            <label class="checkbox">
+                                <input type="checkbox" name="Força" value="Força" class="attr-check" checked>
+                                <input type="checkbox" name="Força" value="Força" class="attr-check">
+                                <input type="checkbox" name="Força" value="Força" class="attr-check">
+                                <input type="checkbox" name="Força" value="Força" class="attr-check">
+                                <input type="checkbox" name="Força" value="Força" class="attr-check">
+                            </label>
+                        </div>
+                        <div class="Fisicos">
+                            <label class="Destreza"><strong>Destreza</strong></label>
+                            <label class="checkbox">
+                                <input type="checkbox" name="Destreza" value="Destreza" class="attr-check" checked>
+                                <input type="checkbox" name="Destreza" value="Destreza" class="attr-check">
+                                <input type="checkbox" name="Destreza" value="Destreza" class="attr-check">
+                                <input type="checkbox" name="Destreza" value="Destreza" class="attr-check">
+                                <input type="checkbox" name="Destreza" value="Destreza" class="attr-check">
+                            </label>
+                        </div>
+                        <div class="Fisicos">
+                            <label class="Vigor"><strong>Vigor</strong></label>
+                            <label class="checkbox">
+                                <input type="checkbox" name="Vigor" value="Vigor" class="attr-check" checked>
+                                <input type="checkbox" name="Vigor" value="Vigor" class="attr-check">
+                                <input type="checkbox" name="Vigor" value="Vigor" class="attr-check">
+                                <input type="checkbox" name="Vigor" value="Vigor" class="attr-check">
+                                <input type="checkbox" name="Vigor" value="Vigor" class="attr-check">
+                            </label>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="Subtitulo" data-max="5" id="titulo-Sociais">Sociais ( 05 )</h3>
+                        <div class="Sociais">
+                            <label><strong>Carisma</strong></label>
+                            <label>
+                                <input type="checkbox" name="Carisma" value="Carisma" class="attr-check" checked>
+                                <input type="checkbox" name="Carisma" value="Carisma" class="attr-check">
+                                <input type="checkbox" name="Carisma" value="Carisma" class="attr-check">
+                                <input type="checkbox" name="Carisma" value="Carisma" class="attr-check">
+                                <input type="checkbox" name="Carisma" value="Carisma" class="attr-check">
+                            </label>
+                        </div>
+                        <div class="Sociais">
+                            <label><strong>Manipulação</strong></label>
+                            <label>
+                                <input type="checkbox" name="Manipulação" value="Manipulação" class="attr-check"
+                                    checked>
+                                <input type="checkbox" name="Manipulação" value="Manipulação" class="attr-check">
+                                <input type="checkbox" name="Manipulação" value="Manipulação" class="attr-check">
+                                <input type="checkbox" name="Manipulação" value="Manipulação" class="attr-check">
+                                <input type="checkbox" name="Manipulação" value="Manipulação" class="attr-check">
+                            </label>
+                        </div>
+                        <div class="Sociais">
+                            <label><strong>Aparencia</strong></label>
+                            <label>
+                                <input type="checkbox" name="Aparencia" value="Aparencia" class="attr-check" checked>
+                                <input type="checkbox" name="Aparencia" value="Aparencia" class="attr-check">
+                                <input type="checkbox" name="Aparencia" value="Aparencia" class="attr-check">
+                                <input type="checkbox" name="Aparencia" value="Aparencia" class="attr-check">
+                                <input type="checkbox" name="Aparencia" value="Aparencia" class="attr-check">
+                            </label>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="Subtitulo" data-max="3" id="titulo-Mentais">Mentais ( 03 )</h3>
+                        <div class="Mentais">
+                            <label><strong>Percepção</strong></label>
+                            <label>
+                                <input type="checkbox" name="Percepção" value="Percepção" class="attr-check" checked>
+                                <input type="checkbox" name="Percepção" value="Percepção" class="attr-check">
+                                <input type="checkbox" name="Percepção" value="Percepção" class="attr-check">
+                                <input type="checkbox" name="Percepção" value="Percepção" class="attr-check">
+                                <input type="checkbox" name="Percepção" value="Percepção" class="attr-check">
+                            </label>
+                        </div>
+                        <div class="Mentais">
+                            <label><strong>Inteligencia</strong></label>
+                            <label>
+                                <input type="checkbox" name="Inteligencia" value="Inteligencia" class="attr-check"
+                                    checked>
+                                <input type="checkbox" name="Inteligencia" value="Inteligencia" class="attr-check">
+                                <input type="checkbox" name="Inteligencia" value="Inteligencia" class="attr-check">
+                                <input type="checkbox" name="Inteligencia" value="Inteligencia" class="attr-check">
+                                <input type="checkbox" name="Inteligencia" value="Inteligencia" class="attr-check">
+                            </label>
+                        </div>
+                        <div class="Mentais">
+                            <label><strong>Raciocínio</strong></label>
+                            <label>
+                                <input type="checkbox" name="Raciocínio" value="Raciocínio" class="attr-check" checked>
+                                <input type="checkbox" name="Raciocínio" value="Raciocínio" class="attr-check">
+                                <input type="checkbox" name="Raciocínio" value="Raciocínio" class="attr-check">
+                                <input type="checkbox" name="Raciocínio" value="Raciocínio" class="attr-check">
+                                <input type="checkbox" name="Raciocínio" value="Raciocínio" class="attr-check">
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="Setor">
+                <h2 class="Subtitulo" id="titulo-Habilidades">Habilidades</h2>
+                <div class="Classificação">
+                    <h3 class="Subtitulo" id="titulo-Talentos" data-max="13">Talentos ( 13 )</h3>
+                    <h3 class="Subtitulo" id="titulo-Pericias" data-max="09">Pericias ( 9 )</h3>
+                    <h3 class="Subtitulo" id="titulo-Conhecimentos" data-max="07">Conhecimentos ( 7 )</h3>
+                </div>
+                <div class="Habilidades">
+                    <div>
+                        <div class="Talentos">
+                            <label><strong>Prontidão</strong></label>
+                            <label>
+                                <input type="checkbox" name="Prontidão" value="Prontidão">
+                                <input type="checkbox" name="Prontidão" value="Prontidão">
+                                <input type="checkbox" name="Prontidão" value="Prontidão">
+                                <input type="checkbox" name="Prontidão" value="Prontidão">
+                                <input type="checkbox" name="Prontidão" value="Prontidão">
+                            </label>
+                        </div>
+                        <div class="Talentos">
+                            <label><strong>Esportes</strong></label>
+                            <label>
+                                <input type="checkbox" name="Esportes" value="Esportes">
+                                <input type="checkbox" name="Esportes" value="Esportes">
+                                <input type="checkbox" name="Esportes" value="Esportes">
+                                <input type="checkbox" name="Esportes" value="Esportes">
+                                <input type="checkbox" name="Esportes" value="Esportes">
+                            </label>
+                        </div>
+                        <div class="Talentos">
+                            <label><strong>Briga</strong></label>
+                            <label>
+                                <input type="checkbox" name="Briga" value="Briga">
+                                <input type="checkbox" name="Briga" value="Briga">
+                                <input type="checkbox" name="Briga" value="Briga">
+                                <input type="checkbox" name="Briga" value="Briga">
+                                <input type="checkbox" name="Briga" value="Briga">
+                            </label>
+                        </div>
+                        <div class="Talentos">
+                            <label><strong>Esquiva</strong></label>
+                            <label>
+                                <input type="checkbox" name="Esquiva" value="Esquiva">
+                                <input type="checkbox" name="Esquiva" value="Esquiva">
+                                <input type="checkbox" name="Esquiva" value="Esquiva">
+                                <input type="checkbox" name="Esquiva" value="Esquiva">
+                                <input type="checkbox" name="Esquiva" value="Esquiva">
+                            </label>
+                        </div>
+                        <div class="Talentos">
+                            <label><strong>Empatia</strong></label>
+                            <label>
+                                <input type="checkbox" name="Empatia" value="Empatia">
+                                <input type="checkbox" name="Empatia" value="Empatia">
+                                <input type="checkbox" name="Empatia" value="Empatia">
+                                <input type="checkbox" name="Empatia" value="Empatia">
+                                <input type="checkbox" name="Empatia" value="Empatia">
+                            </label>
+                        </div>
+                        <div class="Talentos">
+                            <label><strong>Expressão</strong></label>
+                            <label>
+                                <input type="checkbox" name="Expressão" value="Expressão">
+                                <input type="checkbox" name="Expressão" value="Expressão">
+                                <input type="checkbox" name="Expressão" value="Expressão">
+                                <input type="checkbox" name="Expressão" value="Expressão">
+                                <input type="checkbox" name="Expressão" value="Expressão">
+                            </label>
+                        </div>
+                        <div class="Talentos">
+                            <label><strong>Intimidação</strong></label>
+                            <label>
+                                <input type="checkbox" name="Intimidação" value="Intimidação">
+                                <input type="checkbox" name="Intimidação" value="Intimidação">
+                                <input type="checkbox" name="Intimidação" value="Intimidação">
+                                <input type="checkbox" name="Intimidação" value="Intimidação">
+                                <input type="checkbox" name="Intimidação" value="Intimidação">
+                            </label>
+                        </div>
+                        <div class="Talentos">
+                            <label><strong>Liderança</strong></label>
+                            <label>
+                                <input type="checkbox" name="Liderança" value="Liderança">
+                                <input type="checkbox" name="Liderança" value="Liderança">
+                                <input type="checkbox" name="Liderança" value="Liderança">
+                                <input type="checkbox" name="Liderança" value="Liderança">
+                                <input type="checkbox" name="Liderança" value="Liderança">
+                            </label>
+                        </div>
+                        <div class="Talentos">
+                            <label><strong>Manha</strong></label>
+                            <label>
+                                <input type="checkbox" name="Manha" value="Manha">
+                                <input type="checkbox" name="Manha" value="Manha">
+                                <input type="checkbox" name="Manha" value="Manha">
+                                <input type="checkbox" name="Manha" value="Manha">
+                                <input type="checkbox" name="Manha" value="Manha">
+                            </label>
+                        </div>
+                        <div class="Talentos">
+                            <label><strong>Lábia</strong></label>
+                            <label>
+                                <input type="checkbox" name="Lábia" value="Lábia">
+                                <input type="checkbox" name="Lábia" value="Lábia">
+                                <input type="checkbox" name="Lábia" value="Lábia">
+                                <input type="checkbox" name="Lábia" value="Lábia">
+                                <input type="checkbox" name="Lábia" value="Lábia">
+                            </label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="Pericias">
+                            <label><strong>Empatia C. Animais</strong></label>
+                            <label>
+                                <input type="checkbox" name="Empatia C. Animais" value="Empatia C. Animais">
+                                <input type="checkbox" name="Empatia C. Animais" value="Empatia C. Animais">
+                                <input type="checkbox" name="Empatia C. Animais" value="Empatia C. Animais">
+                                <input type="checkbox" name="Empatia C. Animais" value="Empatia C. Animais">
+                                <input type="checkbox" name="Empatia C. Animais" value="Empatia C. Animais">
+                            </label>
+                        </div>
+                        <div class="Pericias">
+                            <label><strong>Oficios</strong></label>
+                            <label>
+                                <input type="checkbox" name="Oficios" value="Oficios">
+                                <input type="checkbox" name="Oficios" value="Oficios">
+                                <input type="checkbox" name="Oficios" value="Oficios">
+                                <input type="checkbox" name="Oficios" value="Oficios">
+                                <input type="checkbox" name="Oficios" value="Oficios">
+                            </label>
+                        </div>
+                        <div class="Pericias">
+                            <label><strong>Condução</strong></label>
+                            <label>
+                                <input type="checkbox" name="Condução" value="Condução">
+                                <input type="checkbox" name="Condução" value="Condução">
+                                <input type="checkbox" name="Condução" value="Condução">
+                                <input type="checkbox" name="Condução" value="Condução">
+                                <input type="checkbox" name="Condução" value="Condução">
+                            </label>
+                        </div>
+                        <div class="Pericias">
+                            <label><strong>Etiqueta</strong></label>
+                            <label>
+                                <input type="checkbox" name="Etiqueta" value="Etiqueta">
+                                <input type="checkbox" name="Etiqueta" value="Etiqueta">
+                                <input type="checkbox" name="Etiqueta" value="Etiqueta">
+                                <input type="checkbox" name="Etiqueta" value="Etiqueta">
+                                <input type="checkbox" name="Etiqueta" value="Etiqueta">
+                            </label>
+                        </div>
+                        <div class="Pericias">
+                            <label><strong>Armas de Fogo</strong></label>
+                            <label>
+                                <input type="checkbox" name="Armas de Fogo" value="Armas de Fogo">
+                                <input type="checkbox" name="Armas de Fogo" value="Armas de Fogo">
+                                <input type="checkbox" name="Armas de Fogo" value="Armas de Fogo">
+                                <input type="checkbox" name="Armas de Fogo" value="Armas de Fogo">
+                                <input type="checkbox" name="Armas de Fogo" value="Armas de Fogo">
+                            </label>
+                        </div>
+                        <div class="Pericias">
+                            <label><strong>Armas Brancas</strong></label>
+                            <label>
+                                <input type="checkbox" name="Armas Brancas" value="Armas Brancas">
+                                <input type="checkbox" name="Armas Brancas" value="Armas Brancas">
+                                <input type="checkbox" name="Armas Brancas" value="Armas Brancas">
+                                <input type="checkbox" name="Armas Brancas" value="Armas Brancas">
+                                <input type="checkbox" name="Armas Brancas" value="Armas Brancas">
+                            </label>
+                        </div>
+                        <div class="Pericias">
+                            <label><strong>Performance</strong></label>
+                            <label>
+                                <input type="checkbox" name="Performance" value="Performance">
+                                <input type="checkbox" name="Performance" value="Performance">
+                                <input type="checkbox" name="Performance" value="Performance">
+                                <input type="checkbox" name="Performance" value="Performance">
+                                <input type="checkbox" name="Performance" value="Performance">
+                            </label>
+                        </div>
+                        <div class="Pericias">
+                            <label><strong>Segurança</strong></label>
+                            <label>
+                                <input type="checkbox" name="Segurança" value="Segurança">
+                                <input type="checkbox" name="Segurança" value="Segurança">
+                                <input type="checkbox" name="Segurança" value="Segurança">
+                                <input type="checkbox" name="Segurança" value="Segurança">
+                                <input type="checkbox" name="Segurança" value="Segurança">
+                            </label>
+                        </div>
+                        <div class="Pericias">
+                            <label><strong>Furtividade</strong></label>
+                            <label>
+                                <input type="checkbox" name="Furtividade" value="Furtividade">
+                                <input type="checkbox" name="Furtividade" value="Furtividade">
+                                <input type="checkbox" name="Furtividade" value="Furtividade">
+                                <input type="checkbox" name="Furtividade" value="Furtividade">
+                                <input type="checkbox" name="Furtividade" value="Furtividade">
+                            </label>
+                        </div>
+                        <div class="Pericias">
+                            <label><strong>Sobrevivencia</strong></label>
+                            <label>
+                                <input type="checkbox" name="Sobrevivencia" value="Sobrevivencia">
+                                <input type="checkbox" name="Sobrevivencia" value="Sobrevivencia">
+                                <input type="checkbox" name="Sobrevivencia" value="Sobrevivencia">
+                                <input type="checkbox" name="Sobrevivencia" value="Sobrevivencia">
+                                <input type="checkbox" name="Sobrevivencia" value="Sobrevivencia">
+                            </label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="Conhecimentos">
+                            <label><strong>Academicos</strong></label>
+                            <label>
+                                <input type="checkbox" name="Academicos" value="Academicos">
+                                <input type="checkbox" name="Academicos" value="Academicos">
+                                <input type="checkbox" name="Academicos" value="Academicos">
+                                <input type="checkbox" name="Academicos" value="Academicos">
+                                <input type="checkbox" name="Academicos" value="Academicos">
+                            </label>
+                        </div>
+                        <div class="Conhecimentos">
+                            <label><strong>Computador</strong></label>
+                            <label>
+                                <input type="checkbox" name="Computador" value="Computador">
+                                <input type="checkbox" name="Computador" value="Computador">
+                                <input type="checkbox" name="Computador" value="Computador">
+                                <input type="checkbox" name="Computador" value="Computador">
+                                <input type="checkbox" name="Computador" value="Computador">
+                            </label>
+                        </div>
+                        <div class="Conhecimentos">
+                            <label><strong>Finanças</strong></label>
+                            <label>
+                                <input type="checkbox" name="Finanças" value="Finanças">
+                                <input type="checkbox" name="Finanças" value="Finanças">
+                                <input type="checkbox" name="Finanças" value="Finanças">
+                                <input type="checkbox" name="Finanças" value="Finanças">
+                                <input type="checkbox" name="Finanças" value="Finanças">
+                            </label>
+                        </div>
+                        <div class="Conhecimentos">
+                            <label><strong>Investigação</strong></label>
+                            <label>
+                                <input type="checkbox" name="Investigação" value="Investigação">
+                                <input type="checkbox" name="Investigação" value="Investigação">
+                                <input type="checkbox" name="Investigação" value="Investigação">
+                                <input type="checkbox" name="Investigação" value="Investigação">
+                                <input type="checkbox" name="Investigação" value="Investigação">
+                            </label>
+                        </div>
+                        <div class="Conhecimentos">
+                            <label><strong>Direito</strong></label>
+                            <label>
+                                <input type="checkbox" name="Direito" value="Direito">
+                                <input type="checkbox" name="Direito" value="Direito">
+                                <input type="checkbox" name="Direito" value="Direito">
+                                <input type="checkbox" name="Direito" value="Direito">
+                                <input type="checkbox" name="Direito" value="Direito">
+                            </label>
+                        </div>
+                        <div class="Conhecimentos">
+                            <label><strong>Linguistica</strong></label>
+                            <label>
+                                <input type="checkbox" name="Linguistica" value="Linguistica">
+                                <input type="checkbox" name="Linguistica" value="Linguistica">
+                                <input type="checkbox" name="Linguistica" value="Linguistica">
+                                <input type="checkbox" name="Linguistica" value="Linguistica">
+                                <input type="checkbox" name="Linguistica" value="Linguistica">
+                            </label>
+                        </div>
+                        <div class="Conhecimentos">
+                            <label><strong>Medicina</strong></label>
+                            <label>
+                                <input type="checkbox" name="Medicina" value="Medicina">
+                                <input type="checkbox" name="Medicina" value="Medicina">
+                                <input type="checkbox" name="Medicina" value="Medicina">
+                                <input type="checkbox" name="Medicina" value="Medicina">
+                                <input type="checkbox" name="Medicina" value="Medicina">
+                            </label>
+                        </div>
+                        <div class="Conhecimentos">
+                            <label><strong>Ocultismo</strong></label>
+                            <label>
+                                <input type="checkbox" name="Ocultismo" value="Ocultismo">
+                                <input type="checkbox" name="Ocultismo" value="Ocultismo">
+                                <input type="checkbox" name="Ocultismo" value="Ocultismo">
+                                <input type="checkbox" name="Ocultismo" value="Ocultismo">
+                                <input type="checkbox" name="Ocultismo" value="Ocultismo">
+                            </label>
+                        </div>
+                        <div class="Conhecimentos">
+                            <label><strong>Politica</strong></label>
+                            <label>
+                                <input type="checkbox" name="Politica" value="Politica">
+                                <input type="checkbox" name="Politica" value="Politica">
+                                <input type="checkbox" name="Politica" value="Politica">
+                                <input type="checkbox" name="Politica" value="Politica">
+                                <input type="checkbox" name="Politica" value="Politica">
+                            </label>
+                        </div>
+                        <div class="Conhecimentos">
+                            <label><strong>Ciencia</strong></label>
+                            <label>
+                                <input type="checkbox" name="Ciencia" value="Ciencia">
+                                <input type="checkbox" name="Ciencia" value="Ciencia">
+                                <input type="checkbox" name="Ciencia" value="Ciencia">
+                                <input type="checkbox" name="Ciencia" value="Ciencia">
+                                <input type="checkbox" name="Ciencia" value="Ciencia">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div class="Setor">
+
+            <h2 class="Subtitulo" id="titulo-Vantagens">Vantagens</h2>
+            <div class="Classificação">
+                <h3 class="Subtitulo" id="titulo-Antecedentes" data-max="5">Antecedentes ( 05 )</h3>
+                <h3 class="Subtitulo" id="titulo-Disciplinas" data-max="3">Disciplinas ( 03 )</h3>
+                <h3 class="Subtitulo" id="titulo-Virtudes" data-max="7">Virtudes ( 07 )</h3>
+            </div>
+            <div class="Vantagens">
+                <div>
+                    <div class="Antecedentes">
+                        <label for="Antecedentes"><strong></strong></label>
+                        <input type="text"  name="Antecedentes" id="Antecedentes" required>
+                        <label>
+                            <input type="checkbox" name="Antecedente-01" value="Antecedente-01">
+                            <input type="checkbox" name="Antecedente-01" value="Antecedente-01">
+                            <input type="checkbox" name="Antecedente-01" value="Antecedente-01">
+                            <input type="checkbox" name="Antecedente-01" value="Antecedente-01">
+                            <input type="checkbox" name="Antecedente-01" value="Antecedente-01">
+                        </label>
+                    </div>
+                    <div class="Antecedentes">
+                        <label for="Antecedentes"><strong></strong></label>
+                        <input type="text"  name="Antecedentes" id="Antecedentes" required>
+                        <label>
+                            <input type="checkbox" name="Antecedente-02" value="Antecedente-02">
+                            <input type="checkbox" name="Antecedente-02" value="Antecedente-02">
+                            <input type="checkbox" name="Antecedente-02" value="Antecedente-02">
+                            <input type="checkbox" name="Antecedente-02" value="Antecedente-02">
+                            <input type="checkbox" name="Antecedente-02" value="Antecedente-02">
+                        </label>
+                    </div>
+                    <div class="Antecedentes">
+                        <label for="Antecedentes"><strong></strong></label>
+                        <input type="text"  name="Antecedentes" id="Antecedentes" required>
+                        <label>
+                            <input type="checkbox" name="Antecedente-03" value="Antecedente-03">
+                            <input type="checkbox" name="Antecedente-03" value="Antecedente-03">
+                            <input type="checkbox" name="Antecedente-03" value="Antecedente-03">
+                            <input type="checkbox" name="Antecedente-03" value="Antecedente-03">
+                            <input type="checkbox" name="Antecedente-03" value="Antecedente-03">
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <div class="Disciplinas">
+                        <label for="Disciplinas"><strong></strong></label>
+                        <input type="text" name="Disciplines" id="disciplines01" required>
+                        <label>
+                            <input type="checkbox" name="Disciplina-01" value="Disciplina-01">
+                            <input type="checkbox" name="Disciplina-01" value="Disciplina-01">
+                            <input type="checkbox" name="Disciplina-01" value="Disciplina-01">
+                            <input type="checkbox" name="Disciplina-01" value="Disciplina-01">
+                            <input type="checkbox" name="Disciplina-01" value="Disciplina-01">
+                        </label>
+                    </div>
+                    <div class="Disciplinas">
+                        <label for="Disciplinas"><strong></strong></label>
+                        <input type="text" name="Disciplinas-02" id="disciplines02" required>
+                        <label>
+                            <input type="checkbox" name="Disciplina-02" value="Disciplina-02">
+                            <input type="checkbox" name="Disciplina-02" value="Disciplina-02">
+                            <input type="checkbox" name="Disciplina-02" value="Disciplina-02">
+                            <input type="checkbox" name="Disciplina-02" value="Disciplina-02">
+                            <input type="checkbox" name="Disciplina-02" value="Disciplina-02">
+                        </label>
+                    </div>
+                    <div class="Disciplinas">
+                        <label for="Disciplinas"><strong></strong></label>
+                        <input type="text" name="Disciplinas-03" id="disciplines03" required>
+                        <label>
+                            <input type="checkbox" name="Disciplina-03" value="Disciplina-03">
+                            <input type="checkbox" name="Disciplina-03" value="Disciplina-03">
+                            <input type="checkbox" name="Disciplina-03" value="Disciplina-03">
+                            <input type="checkbox" name="Disciplina-03" value="Disciplina-03">
+                            <input type="checkbox" name="Disciplina-03" value="Disciplina-03">
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <div class="Virtudes">
+                        <label><strong>Consciencia / Convicção</strong></label>
+                        <label>
+                            <input type="checkbox" name="Consciencia-Conviccao" value="Consciencia-Conviccao" checked>
+                            <input type="checkbox" name="Consciencia-Conviccao" value="Consciencia-Conviccao">
+                            <input type="checkbox" name="Consciencia-Conviccao" value="Consciencia-Conviccao">
+                            <input type="checkbox" name="Consciencia-Conviccao" value="Consciencia-Conviccao">
+                            <input type="checkbox" name="Consciencia-Conviccao" value="Consciencia-Conviccao">
+                        </label>
+                    </div>
+                    <div class="Virtudes">
+                        <label><strong>Autocontrole / Instintos</strong></label>
+                        <label>
+                            <input type="checkbox" name="Autocontrole-Instintos" value="Autocontrole-Instintos" checked>
+                            <input type="checkbox" name="Autocontrole-Instintos" value="Autocontrole-Instintos">
+                            <input type="checkbox" name="Autocontrole-Instintos" value="Autocontrole-Instintos">
+                            <input type="checkbox" name="Autocontrole-Instintos" value="Autocontrole-Instintos">
+                            <input type="checkbox" name="Autocontrole-Instintos" value="Autocontrole-Instintos">
+                        </label>
+                    </div>
+                    <div class="Virtudes">
+                        <label><strong>Coragem</strong></label>
+                        <label>
+                            <input type="checkbox" name="Coragem" value="Coragem" checked>
+                            <input type="checkbox" name="Coragem" value="Coragem">
+                            <input type="checkbox" name="Coragem" value="Coragem">
+                            <input type="checkbox" name="Coragem" value="Coragem">
+                            <input type="checkbox" name="Coragem" value="Coragem">
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </form>
+        <hr>
+        <div class="Final-Ficha">
+            <div class="Humanidade">
+                <label><strong>Humanidade</strong></label>
+                <label>
+                    <input type="checkbox" name="Humanidade" value="Humanidade">
+                    <input type="checkbox" name="Humanidade" value="Humanidade">
+                    <input type="checkbox" name="Humanidade" value="Humanidade">
+                    <input type="checkbox" name="Humanidade" value="Humanidade">
+                    <input type="checkbox" name="Humanidade" value="Humanidade">
+            </div>
+            <div class="Força-de-vontade">
+                <label><strong>Força-de-vontade</strong></label>
+                <label>
+                    <input type="checkbox" name="Força-de-vontade" value="Força-de-vontade">
+                    <input type="checkbox" name="Força-de-vontade" value="Força-de-vontade">
+                    <input type="checkbox" name="Força-de-vontade" value="Força-de-vontade">
+                    <input type="checkbox" name="Força-de-vontade" value="Força-de-vontade">
+                    <input type="checkbox" name="Força-de-vontade" value="Força-de-vontade">
+            </div>
+            <div class="Pontos-de-sangue">
+                <label><strong>Pontos-de-sangue</strong></label>
+                <label>
+                    <input type="checkbox" name="Pontos-de-sangue" value="Pontos-de-sangue">
+                    <input type="checkbox" name="Pontos-de-sangue" value="Pontos-de-sangue">
+                    <input type="checkbox" name="Pontos-de-sangue" value="Pontos-de-sangue">
+                    <input type="checkbox" name="Pontos-de-sangue" value="Pontos-de-sangue">
+                    <input type="checkbox" name="Pontos-de-sangue" value="Pontos-de-sangue">
+                    <input type="checkbox" name="Pontos-de-sangue" value="Pontos-de-sangue">
+                    <input type="checkbox" name="Pontos-de-sangue" value="Pontos-de-sangue">
+                    <input type="checkbox" name="Pontos-de-sangue" value="Pontos-de-sangue">
+                    <input type="checkbox" name="Pontos-de-sangue" value="Pontos-de-sangue">
+                    <input type="checkbox" name="Pontos-de-sangue" value="Pontos-de-sangue">
+                    <input type="checkbox" name="Pontos-de-sangue" value="Pontos-de-sangue">
+                    <input type="checkbox" name="Pontos-de-sangue" value="Pontos-de-sangue">
+                    <input type="checkbox" name="Pontos-de-sangue" value="Pontos-de-sangue">
+                    <input type="checkbox" name="Pontos-de-sangue" value="Pontos-de-sangue">
+                    <input type="checkbox" name="Pontos-de-sangue" value="Pontos-de-sangue">
+                    <input type="checkbox" name="Pontos-de-sangue" value="Pontos-de-sangue">
+                    <input type="checkbox" name="Pontos-de-sangue" value="Pontos-de-sangue">
+                    <input type="checkbox" name="Pontos-de-sangue" value="Pontos-de-sangue">
+                    <input type="checkbox" name="Pontos-de-sangue" value="Pontos-de-sangue">
+                    <input type="checkbox" name="Pontos-de-sangue" value="Pontos-de-sangue">
+            </div>
+        </div>
+        <div class="EXP">
+            <div class="Campo-EXP">
+                <label for="EXP"><strong>EXP</strong></label>
+                <input type="text" , name="EXP" id="EXP">
+            </div>
+        </div>
+        </form>
+    </main>
+
+    <footer>
+        <hr>
+    </footer>
+    <script src="JScript/script.js"></script>
+
+</body>
+
+</html>
